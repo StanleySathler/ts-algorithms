@@ -1,6 +1,3 @@
-// type item = number;
-// type items = item[];
-
 export interface Sortable {
   compareWith: (item: Sortable) => number;
 }
