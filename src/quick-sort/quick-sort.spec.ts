@@ -1,7 +1,16 @@
 import quickSort from './quick-sort';
 
+const comparator = (a: number, b: number) => {
+  if (a < b)
+    return -1;
+  else if (a === b)
+    return 0;
+  else
+    return 1;
+};
+
 const match = (received, expected) => {
-  quickSort(received, 0, received.length);
+  quickSort(received, 0, received.length, comparator);
   expect(received).toEqual(expected);
 }
 
